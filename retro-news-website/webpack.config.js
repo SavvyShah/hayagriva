@@ -1,30 +1,30 @@
-const path = require('path')
+const path = require("path")
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
-    mode: 'development',
-    devtool: 'eval-source-map',
+    mode: "development",
+    devtool: "eval-source-map",
     devServer: {
         port: 8082,
-        contentBase: './client/public',
+        contentBase: "./client/public",
     },
-    entry: path.join(__dirname, 'client', 'src', 'index.js'),
+    entry: path.join(__dirname, "client", "src", "index.js"),
     output: {
-        path: path.join(__dirname, 'client', 'public'),
-        filename: '[name].bundle.js',
+        path: path.join(__dirname, "client", "public"),
+        filename: "[name].bundle.js",
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: path.join(__dirname, 'client', 'public', 'index.html'),
-            template: path.join(__dirname, 'client', 'src', 'index.html'),
-            chunksSortMode: 'none',
+            filename: path.join(__dirname, "client", "public", "index.html"),
+            template: path.join(__dirname, "client", "src", "index.html"),
+            chunksSortMode: "none",
             favicon: path.join(
                 __dirname,
-                'client',
-                'src',
-                'assets',
-                'favicon.ico'
+                "client",
+                "src",
+                "assets",
+                "favicon.ico"
             ),
         }),
     ],
@@ -34,19 +34,19 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
+                loader: "babel-loader",
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                use: ["style-loader", "css-loader"],
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: ['file-loader'],
+                use: ["file-loader"],
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: ['file-loader'],
+                use: ["file-loader"],
             },
         ],
     },
