@@ -1,4 +1,5 @@
 import React from "react"
+import { withDesign } from "storybook-addon-designs"
 
 import { Button } from "./Button"
 
@@ -8,6 +9,7 @@ export default {
     argTypes: {
         backgroundColor: { control: "color" },
     },
+    decorators: [withDesign],
 }
 
 const Template = (args) => <Button {...args} />
@@ -16,6 +18,13 @@ export const Primary = Template.bind({})
 Primary.args = {
     primary: true,
     label: "Button",
+}
+Primary.parameters = {
+    design: {
+        type: "figma",
+        url:
+            "https://www.figma.com/file/LGRtJXAzn9Lnq8gpHtQEEc/Retro-News-website?node-id=14%3A59",
+    },
 }
 
 export const Secondary = Template.bind({})
