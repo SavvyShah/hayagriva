@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-- [Design Philosophy](https://github.com/ShubhamCanMakeCommit/hayagriva#design-philosophy)
+- [Design Philosophy](https://github.com/ShubhamCanMakeCommit/hayagriva/tree/master/retro-news-website#design-philosophy)
 
 ## Design Philosophy
 
